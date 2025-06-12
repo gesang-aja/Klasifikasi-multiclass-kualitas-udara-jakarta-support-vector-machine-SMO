@@ -11,7 +11,7 @@ st.set_page_config(page_title="Prediksi Kategori ISPU", layout="centered")
 # Load dict berisi model, scaler, encoder, imputer
 @st.cache_resource
 def load():
-    return joblib.load(r'models\svm_ovo_smo.joblib')
+    return joblib.load('models/svm_ovo_smo.joblib')
 
 artifacts = load()
 model = artifacts['model']
